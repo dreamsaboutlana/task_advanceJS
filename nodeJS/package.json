@@ -1,0 +1,22 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "node.js test task",
+  "main": "main.js",
+  "dependencies": {
+    "yahoo-weather": "^2.2.2"
+  },
+  "devDependencies": {
+    "fancy-log": "^1.3.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "main": "npm start && node main.js"
+  },
+  "keywords": [
+    "node.js"
+  ],
+  "author": "Svitlana Golovko",
+  "license": "ISC"
+}
