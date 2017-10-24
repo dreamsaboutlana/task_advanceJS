@@ -4,11 +4,13 @@
   "description": "home task",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "createDir":" node main.js"
   },
   "author": "sveta golovko",
   "license": "ISC",
   "dependencies": {
     "file-system": "^2.2.2"
-  }
+  },
+  "devDependencies": {}
 }

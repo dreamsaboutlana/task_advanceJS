@@ -1,9 +1,10 @@
 'use strict';
-/*
-Создать проект, используя npm init.
-Установить пакет https://www.npmjs.com/package/file-system
-Используя модуль file-system, создать папку с произвольным названием,
-в ней создать текстовый файл c текущей датой (папки и файлы создаются средствами nodejs).
-Запуск скрипта должен производиться командой npm run createDir.
-Все зависимости должны быть отображены в package.json.
-*/
+const fs = require('file-system');
+
+fs.writeFile("test_folder/test.txt", new Date().toLocaleDateString(), function(e) {
+  if(e) {
+    return console.log(e);
+  }
+  console.log("The file was saved in new folder!");
+});
+
