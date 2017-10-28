@@ -12,7 +12,10 @@ const http = require('http');
 http.get('http://wttr.in/~kharkov', (res) => {
   if (res.statusCode !== 200) throw new Error(res.statusCode);
   res.setEncoding('utf-8');
-  res.on('data', data => fs.writeFile("weather.html", data, function (e) {
+  let result = '';
+  res.on('data', data => result += data);
+  res.on('end', () => fs.writeFile("weather.html", result, function (e) {
+    console.log(result);
     if (e) {
       return console.log(e);
     }
