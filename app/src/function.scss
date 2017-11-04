@@ -1,0 +1,18 @@
+@function getPart($number, $persent) {
+  @return $number*100/$persent;
+}
+
+@function getDarken($color) {
+  @return darken($color, 20%);
+}
+
+@for $i from 1 through 10 {
+  .width#{$i} {
+    width:10*$i+%;
+  }
+}
+@for $i from 1 through 20 {
+  li:nth-child( #{$i} ) {
+    background: rgb($i*$i, $i, $i*$i);
+  }
+}
