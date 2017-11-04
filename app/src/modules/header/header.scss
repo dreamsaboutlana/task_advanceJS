@@ -1,0 +1,67 @@
+@import '../../variables';
+
+header {
+  background: #000;
+  color: #fff;
+  font-size: $font;
+
+  nav {
+    background: #7f7f7f;
+
+    ul {
+      list-style: none;
+    }
+  }
+}
+
+$colors: lightblue, blue, darlblue, blueviolet;
+
+ul {
+  @for $i from 1 through length($colors) {
+    li:nth-child(#{$i}) {
+      background: nth($colors, $i);
+    }
+  }
+}
+
+@each $animal in puma, sea-slug, egret {
+  .#{$animal}-icon {
+    background: url('/images/#{$animal}.png');
+  }
+}
+
+@function getLineHeight($fs) {
+  @return $fs*1.3;
+}
+
+p {
+  $fsz: 12px;
+  font-size: $fsz;
+  line-height: getLineHeight(10px);
+}
+
+@mixin red-text {
+  color: darkred;
+  text-shadow: 1px 1px 1px red;
+}
+
+@mixin red-text($shadow...) {
+  color: darkred;
+  text-shadow: $shadow; // 1px 1px 1px red для передачи строки
+}
+
+p.error {
+  @include red-text;
+  margin: 0 0 15px;
+}
+
+@mixin bf {
+  &:after {
+    content: '-';
+    margin: 0 10px 0 0;
+  }
+}
+
+li {
+  @include br;
+}

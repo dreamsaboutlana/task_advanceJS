@@ -1,0 +1,10 @@
+$color: #ccc;
+$font-size: 14px;
+footer {
+  background: $color;
+  color: red;
+  font-size: $font-size;
+  a{
+    font-size:$font-size - 2;
+  }
+}
