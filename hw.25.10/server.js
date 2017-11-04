@@ -41,7 +41,7 @@ http.createServer((req, res) => {
     }
     let now = getDate();
     let newData = data.replace('</body>', '<p>' + now + '</p></body>');
-    
+
     res.end(newData);
   })
 
