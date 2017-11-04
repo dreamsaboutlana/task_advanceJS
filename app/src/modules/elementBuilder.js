@@ -1,8 +1,9 @@
 'use strict';
+const $ = require('jquery');
 module.exports = (tag = 'div', conent = '', className = 'box') => {
-  const element = document.createElement(tag);
-  element.className = className;
-  element.innerHTML = conent;
-  
+  const element = $(`<${tag}></${tag}>`);
+  element.addClass(className);
+  element.html(conent);
+
   return element;
 };
