@@ -1,3 +1,2 @@
 'use strict';
-module.exports = () => new Date().toLocaleDateString();
-// module.exports = getDate;
+export default () =>  new Date().toLocaleDateString();

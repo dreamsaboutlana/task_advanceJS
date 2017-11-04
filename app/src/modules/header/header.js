@@ -1,7 +1,7 @@
-const builder = require('./../elementBuilder');
-require('./header.scss');
+import builder from './../elementBuilder';
+import './header.scss';
 
-module.exports = () => {
+export const header = () => {
   const content = '<a href="/">Logo</a>';
   return builder('header', content, 'header');
 };

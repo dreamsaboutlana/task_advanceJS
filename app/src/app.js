@@ -1,10 +1,10 @@
 'use strict';
-const header = require('./modules/header/header')();
-const main = require('./modules/main/main')();
-const footer = require('./modules/footer/footer')();
-const $ = require('jquery');
-require('./app.scss');
+import { header } from './modules/header/header';
+import main from './modules/main/main';
+import footer from './modules/footer';
+import $ from 'jquery';
+import './app.scss';
 
-$('body').append(header);
-$('body').append(main);
-$('body').append(footer);
+$('body').append(header());
+$('body').append(main());
+$('body').append(footer());
