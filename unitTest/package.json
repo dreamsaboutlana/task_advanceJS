@@ -1,0 +1,9 @@
+{
+  "name": "unitTest",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "cli-color": "^1.2.0"
+  }
+}
